@@ -1,0 +1,132 @@
+.centered-text {
+  margin-bottom: 2rem;
+}
+
+.centered-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.centered-text p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-slider-container {
+  background-color: #eff4ff;
+  padding: 50px;
+}
+
+.card-slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.card {
+  flex: 0 0 calc(100% / 3);
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-right: 10px; /* Add a right margin for the gap between cards */
+}
+
+.card:last-child {
+  margin-right: 0; /* Remove the right margin from the last card */
+}
+
+.card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.card-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.card-text h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.card-text p {
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .card-slider {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    display: flex;
+    width: 100%;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    flex-direction: column; /* Stack the content vertically on mobile */
+    align-items: flex-start; /* Align the content to the left */
+    margin-right: 0; /* Remove the right margin on mobile */
+    margin-bottom: 10px; /* Add a bottom margin for the gap between cards */
+  }
+
+  .card:last-child {
+    margin-bottom: 0; /* Remove the bottom margin from the last card */
+  }
+
+  .card-image {
+    display: flex;
+
+    height: 200px;
+    width: auto;
+  }
+
+  .card-text {
+    width: 80%;
+    max-width: 400px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* Hide scrollbar */
+  .card-slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center; /* Center align the arrows */
+  margin-top: 10px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #eff4ff;
+  cursor: pointer;
+}
+
+.arrow img {
+  width: 20px;
+  height: 20px;
+}

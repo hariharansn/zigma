@@ -1,0 +1,77 @@
+.products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tab-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap to new lines on smaller screens */
+  gap: 10px; /* Add a gap between each tab */
+}
+
+.tab {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 1px solid #fbfbfb; /* Add a border to each tab */
+}
+
+.tab.active {
+  background-color: #fbfbfb;
+  border-bottom: 2px solid black; /* Add a black bottom border to the active tab */
+}
+
+/* Product content styles */
+.product-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Left half container */
+.product-left-half {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  background-color: #fff;
+}
+
+/* Right half container */
+.product-right-half {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: justify;
+  align-items: center;
+  background-color: #fff;
+}
+
+/* Product image styles */
+.product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+  /* Update the layout for smaller devices */
+  .product-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-left-half,
+  .product-right-half {
+    padding: 20px;
+    text-align: justify;
+    background-color: #fff;
+  }
+
+  .product-right-half {
+    margin-top: 20px;
+  }
+}

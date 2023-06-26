@@ -1,0 +1,135 @@
+.partners-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Left half container */
+.partner-left-half {
+  flex: 1;
+  padding: 20px;
+  background-color: #fbfbfb;
+}
+
+/* Right half container */
+.partner-right-half {
+  flex: 1;
+  padding: 20px;
+  background-color: #fbfbfb;
+}
+
+/* Title styles */
+.partners-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Text styles */
+.partners-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 20px; /* Adjust the margin as desired */
+}
+
+/* Logos container styles */
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Logo styles */
+.logos img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.partner-logo {
+  max-width: 100px; /* Adjust the maximum width as desired */
+  margin: 0 10px; /* Adjust the margin between logos as desired */
+  opacity: 0;
+  animation: fadeLogo 1.5s ease-in-out infinite alternate;
+}
+
+/* Partner banner styles */
+.partner-right-half img {
+  max-width: 100%;
+  height: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+  /* Update the layout for smaller devices */
+  .partners-container {
+    flex-direction: column;
+  }
+
+  .partner-left-half,
+  .partner-right-half {
+    padding: 20px;
+    text-align: justify;
+    background-color: #fbfbfb;
+  }
+  .partner-logo {
+    max-width: 10px; /* Adjust the maximum width for mobile */
+    animation: fadeLogo 1.5s ease-in-out infinite alternate;
+  }
+}
+.logos {
+  justify-content: center;
+}
+
+.partner-right-half img {
+  padding: 0;
+}
+
+/* Media query for large devices */
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+  /* Update the layout for smaller devices */
+  .partners-container {
+    flex-direction: column;
+  }
+
+  .partner-left-half,
+  .partner-right-half {
+    padding: 20px;
+    text-align: justify;
+    background-color: #fbfbfb;
+  }
+
+  .partner-logo {
+    max-width: 80px; /* Adjust the maximum width for mobile */
+    animation: fadeLogo 1.5s ease-in-out infinite alternate;
+    margin: 0 5px; /* Adjust the margin between logos for mobile */
+  }
+
+  .logos {
+    justify-content: center;
+  }
+
+  .partner-right-half img {
+    padding: 0;
+    max-width: 100%; /* Adjust the maximum width for mobile */
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@keyframes fadeLogo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
